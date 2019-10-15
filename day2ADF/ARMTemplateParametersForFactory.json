@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "day2ADF"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDW1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"SourceBlobStorage_connectionString": {
+			"value": ""
+		},
+		"SqlServer1_connectionString": {
+			"value": ""
+		},
+		"SqlServer1_password": {
+			"value": ""
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"value": "dvsm-2016\\sqladmin"
+		},
+		"BlobTrigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/79535b02-9348-4afb-abb2-630dfd206b77/resourceGroups/day2RG/providers/Microsoft.Storage/storageAccounts/daytwostorage"
+		}
+	}
+}

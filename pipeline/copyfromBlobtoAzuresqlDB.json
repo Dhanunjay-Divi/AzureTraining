@@ -30,40 +30,6 @@
 						"type": "DelimitedTextReadSettings"
 					}
 				}
-			},
-			{
-				"name": "ForEach1",
-				"type": "ForEach",
-				"dependsOn": [
-					{
-						"activity": "FetchFilelist",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"userProperties": [],
-				"typeProperties": {
-					"items": {
-						"value": "@activity('FetchFilelist').output.childItems",
-						"type": "Expression"
-					},
-					"activities": [
-						{
-							"name": "Set variable1",
-							"type": "SetVariable",
-							"dependsOn": [],
-							"userProperties": [],
-							"typeProperties": {
-								"variableName": "fileName",
-								"value": {
-									"value": "@item().name",
-									"type": "Expression"
-								}
-							}
-						}
-					]
-				}
 			}
 		],
 		"variables": {

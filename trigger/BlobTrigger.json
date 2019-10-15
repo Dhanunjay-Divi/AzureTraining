@@ -1,0 +1,25 @@
+{
+	"name": "BlobTrigger",
+	"properties": {
+		"description": "It trigger off the copy blob from blob pipeline as soon as some files are loaded in to the source container",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "CopyFromBlobToBLOB",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/daytwocontainer/blobs/",
+			"blobPathEndsWith": ".csv",
+			"scope": "/subscriptions/79535b02-9348-4afb-abb2-630dfd206b77/resourceGroups/day2RG/providers/Microsoft.Storage/storageAccounts/daytwostorage",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
